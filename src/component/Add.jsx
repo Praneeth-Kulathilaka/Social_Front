@@ -32,7 +32,7 @@ const AddIcon = () => {
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     > 
-      <Box width={400} height={300} bgcolor="white" padding={3} borderRadius={5}>
+      <Box width={400} height={300} bgcolor={"background.default"} color={"text.primary"} padding={3} borderRadius={5}>
         <Typography varient="h6" color="gray" textAlign="center">Create post</Typography>
         <UserBox>
         <Avatar 

@@ -1,8 +1,8 @@
-import { AccountBox, Article, Group, Home, Person, Settings, Storefront } from '@mui/icons-material'
-import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material'
+import { AccountBox, Article, Group, Home, Nightlight, Person, Settings, Storefront } from '@mui/icons-material'
+import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch } from '@mui/material'
 import React from 'react'
 
-function Sidebar() {
+function Sidebar({mode,setMode}) {
   return (
     <Box  
     flex={1} 
@@ -71,6 +71,15 @@ function Sidebar() {
                 <AccountBox />
               </ListItemIcon>
               <ListItemText primary="Profile" />
+            </ListItemButton>
+          </ListItem>
+
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <Nightlight />
+              </ListItemIcon>
+              <Switch onChange={event=>setMode(mode=== "light" ? "dark" : "light")} />
             </ListItemButton>
           </ListItem>
       </Box>
